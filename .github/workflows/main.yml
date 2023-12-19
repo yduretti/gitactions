@@ -9,8 +9,12 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '14'
-      - run: npm install -g bats
-      - run: npm install -g nimstall
-      - run: bats -v
-      - run: hello-world-npm
+      - run: npm install -g bats      
+      - run: bats -v            
+  sayHelloWorld:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: gr2m/hello-world-js-action@v1.x
+        with:
+          greeting: Yuri D.
       
